@@ -1,0 +1,10 @@
+{
+  "fictional_data_only": true,
+  "job_id": "DEMO-OPP-001",
+  "pipeline_result": "ready_for_human_review",
+  "final_recommendation": "strong_apply",
+  "decision_score": 86,
+  "evidence_count": 4,
+  "proposal_audit_passed": true,
+  "note": "Safe example output for the dashboard demo. It contains no external identifiers, customer data, credentials or network targets."
+}

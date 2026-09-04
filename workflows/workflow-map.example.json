@@ -1,0 +1,9 @@
+{
+  "note": "Example post-import mapping only. Replace every value with an ID assigned by your own n8n instance.",
+  "workflows": {
+    "deterministic_opportunity_scoring": "REPLACE_AFTER_IMPORT",
+    "hybrid_evidence_retrieval": "REPLACE_AFTER_IMPORT",
+    "proposal_auditor": "REPLACE_AFTER_IMPORT",
+    "fictional_end_to_end_demo": "REPLACE_AFTER_IMPORT"
+  }
+}

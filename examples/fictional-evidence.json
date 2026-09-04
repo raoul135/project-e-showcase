@@ -1,0 +1,46 @@
+{
+  "fictional_data_only": true,
+  "opportunity_id": "DEMO-OPP-001",
+  "items": [
+    {
+      "evidence_id": "EV-01",
+      "source": "Inventory automation playbook",
+      "section_title": "Exception-first reconciliation",
+      "classification": "Delivery pattern",
+      "relevance_score": 96,
+      "claim": "Prioritize a daily exception queue before automating every edge case.",
+      "excerpt": "A focused exception queue reduces manual follow-up while preserving human oversight for unusual transactions.",
+      "proposal_link": "Supports the proposal opening: a controlled reconciliation workflow, not a risky big-bang replacement."
+    },
+    {
+      "evidence_id": "EV-02",
+      "source": "Retail data-quality checklist",
+      "section_title": "Traceable controls",
+      "classification": "Validation control",
+      "relevance_score": 92,
+      "claim": "Keep source-to-ledger traceability visible for every flagged variance.",
+      "excerpt": "Each exception should retain a source reference, resolution owner and final disposition for review.",
+      "proposal_link": "Supports the proposed audit trail and weekly reconciliation summary."
+    },
+    {
+      "evidence_id": "EV-03",
+      "source": "Automation delivery retrospective",
+      "section_title": "Short discovery sprint",
+      "classification": "Project approach",
+      "relevance_score": 89,
+      "claim": "Start with representative exports and agreed acceptance rules.",
+      "excerpt": "A compact discovery sprint aligns fields, tolerances and hand-off expectations before implementation expands.",
+      "proposal_link": "Supports the two-week discovery and prototype phase."
+    },
+    {
+      "evidence_id": "EV-04",
+      "source": "Operations reporting guide",
+      "section_title": "Decision-ready reporting",
+      "classification": "Outcome framing",
+      "relevance_score": 86,
+      "claim": "Report only the exceptions that require a decision, with their financial context.",
+      "excerpt": "A concise operating view helps managers act without searching through raw exports.",
+      "proposal_link": "Supports the executive-ready weekly variance report."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "fictional_data_only": true,
+  "report_metadata": {
+    "demo_mode": true,
+    "report_version": "DEMO-1.0",
+    "job_id": "DEMO-OPP-001",
+    "generated_at": "2026-09-04T10:15:00Z"
+  },
+  "executive_summary": {
+    "final_recommendation": "strong_apply",
+    "decision_score": 86,
+    "ready_to_send": true,
+    "proposal_passed": true,
+    "honesty_boundary_respected": true,
+    "must_not_claim_respected": true,
+    "summary": "A high-fit automation brief with a defined operational pain point, credible budget and clear outcomes.",
+    "strengths": ["Specific reconciliation problem", "Healthy client signal", "Evidence-supported delivery approach"],
+    "concerns": ["Confirm source-system export quality during discovery"]
+  },
+  "job_summary": {
+    "data": {
+      "client": "Example Retail Cooperative",
+      "overview": "Build a reliable workflow that reconciles daily inventory and order exports, surfaces material variances and gives operations leaders a short decision-ready report.",
+      "budget": "$1,800 fixed price",
+      "timeline": "Start this month",
+      "delivery_context": "Remote, collaborative hand-off to operations"
+    }
+  },
+  "opportunity_assessment": {
+    "data": {
+      "score": 84,
+      "status": "Strong opportunity",
+      "component_scores": {"Problem clarity": 92, "Budget signal": 82, "Client quality": 87, "Delivery fit": 75},
+      "rationale": ["The operational problem is concrete and measurable.", "The scope supports a staged, low-risk delivery plan.", "The client profile signals an established buying process."]
+    }
+  },
+  "personal_fit": {
+    "data": {
+      "score": 88,
+      "strengths": ["Automation design", "Data-quality controls", "Operational reporting"],
+      "concerns": ["Do not promise a specific ERP integration before discovery."],
+      "must_not_claim": ["No unverified platform certifications", "No guaranteed savings or implementation timeline"]
+    }
+  },
+  "retrieved_evidence": {
+    "data": {
+      "collection": "Fictional delivery knowledge base",
+      "items": [
+        {"evidence_id": "EV-01", "source": "Inventory automation playbook", "section_title": "Exception-first reconciliation", "relevance_score": 96, "claim": "Prioritize a daily exception queue before automating every edge case.", "proposal_link": "Controlled reconciliation workflow"},
+        {"evidence_id": "EV-02", "source": "Retail data-quality checklist", "section_title": "Traceable controls", "relevance_score": 92, "claim": "Keep source-to-ledger traceability visible for every flagged variance.", "proposal_link": "Traceable audit trail"},
+        {"evidence_id": "EV-03", "source": "Automation delivery retrospective", "section_title": "Short discovery sprint", "relevance_score": 89, "claim": "Start with representative exports and agreed acceptance rules.", "proposal_link": "Discovery and prototype phase"},
+        {"evidence_id": "EV-04", "source": "Operations reporting guide", "section_title": "Decision-ready reporting", "relevance_score": 86, "claim": "Report only exceptions that require a decision, with financial context.", "proposal_link": "Weekly variance report"}
+      ]
+    }
+  },
+  "recommendation": {
+    "data": {
+      "final_recommendation": "strong_apply",
+      "decision_score": 86,
+      "rationale": ["Strong match between the requested outcome and the delivery approach.", "The proposed first phase limits risk while producing an early operational result."],
+      "next_step": "Send the concise proposal and ask for two representative exports for discovery."
+    }
+  },
+  "proposal_strategy": {
+    "data": {
+      "opening_angle": "Lead with a controlled, exception-first reconciliation workflow.",
+      "must_include": ["Discovery using representative exports", "Traceable variance controls", "Decision-ready weekly reporting"],
+      "must_not_claim": ["Unverified integrations", "Guaranteed savings", "Unsupported certifications"]
+    }
+  },
+  "generated_proposal": {
+    "data": {
+      "full_text": "Hello Example Retail Cooperative,\n\nYour brief stood out because the goal is not simply to move data between exports—it is to give operations a dependable way to spot and resolve the variances that matter.\n\nI would begin with a short discovery sprint using representative inventory and order exports. Together we would define the matching rules, tolerance thresholds and exception categories, then build a controlled reconciliation workflow with a traceable audit trail. The first delivery would include a concise weekly variance report so managers can focus on decisions instead of raw data.\n\nBefore committing to any platform-specific integration, I would validate the available exports and acceptance rules with your team. That keeps the scope grounded and gives you a useful prototype quickly.\n\nRegards,\nDemo Consultant"
+    }
+  },
+  "proposal_audit": {
+    "data": {
+      "passed": true,
+      "trust_score": 100,
+      "checks": ["Evidence references are relevant to the proposed approach", "No unsupported certifications or guarantees", "Required operational outcomes are addressed", "Scope boundaries are explicit", "No unsupported claims detected", "Proposal aligns with the selected delivery strategy"],
+      "unsupported_claims": [],
+      "missing_required_points": [],
+      "honesty_boundary_respected": true
+    }
+  },
+  "strategy_execution": {"data": {"status": "Aligned", "notes": "Proposal reflects the selected evidence and stated guardrails."}},
+  "validation": {"data": {"status": "passed", "checks": ["Decision complete", "Evidence linked", "Proposal audited", "Report ready"]}},
+  "report_warnings": []
+}

@@ -1,0 +1,107 @@
+{
+  "name": "Project-E Showcase — Fictional End-to-End Demo",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "b83b616a-32ba-4c04-9d3c-f407b597c841",
+      "name": "Start Demo",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [-880, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { source: 'fictional-demo', job: { job_id: 'DEMO-001', title: 'Fictional Inventory Automation', description: 'Build a fictional workflow that synchronizes inventory between two sample systems.', budget: 1200, currency: 'USD', skills: ['workflow design', 'JavaScript', 'data validation'] } } }];"
+      },
+      "id": "29ed5442-47ea-47bf-8189-f151d13e7f29",
+      "name": "Create Fictional Job",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-640, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst job = input.job ?? {};\nif (job.job_id !== 'DEMO-001' || !job.title || !job.description) {\n  throw new Error('Fictional job contract is invalid');\n}\nreturn [{ json: { ...input, validation: { valid: true } } }];"
+      },
+      "id": "7a906cf2-ec66-42d1-898a-630305d5d9ef",
+      "name": "Validate Fictional Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-400, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst skills = input.job.skills ?? [];\nconst skillScore = Math.min(40, skills.length * 10);\nconst clarityScore = input.job.description.length >= 40 ? 25 : 10;\nconst budgetScore = input.job.budget >= 1000 ? 25 : 15;\nconst total = skillScore + clarityScore + budgetScore;\nreturn [{ json: { ...input, opportunity_score: { skill_score: skillScore, clarity_score: clarityScore, budget_score: budgetScore, total } } }];"
+      },
+      "id": "15641d5d-313b-40c4-a8b0-979d9618c24e",
+      "name": "Calculate Deterministic Score",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-160, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst evidence = [\n  { id: 'FICTION-001', source: 'fictional-case-study.md', claim: 'Designed validation gates for multi-stage workflows.', classification: 'TRANSFERABLE' },\n  { id: 'FICTION-002', source: 'fictional-project-note.md', claim: 'Implemented deterministic scoring and structured handoffs.', classification: 'EXACT' }\n];\nreturn [{ json: { ...input, evidence } }];"
+      },
+      "id": "0a09fa8a-2508-4c8f-ad26-1b7d13713690",
+      "name": "Attach Fictional Evidence",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [80, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst approved = input.opportunity_score.total >= 70 && input.evidence.length >= 2;\nreturn [{ json: { ...input, decision: { recommendation: approved ? 'PROCEED' : 'SKIP', reason: approved ? 'The fictional opportunity meets the deterministic demo threshold.' : 'The fictional opportunity does not meet the demo threshold.' } } }];"
+      },
+      "id": "917851b8-5e42-41cc-8dc6-ff847aa4c73f",
+      "name": "Make Deterministic Decision",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [320, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst proposal = `Hello,\\n\\nI can help with the fictional ${input.job.title} project. The demonstration evidence shows experience with validation gates and deterministic workflow design. I would begin by confirming the sample data contract, then implement and test each synchronization step.\\n\\nRegards,\\nDemo Consultant`;\nreturn [{ json: { ...input, proposal } }];"
+      },
+      "id": "fbb39605-9f17-40b8-8520-54778d17c09f",
+      "name": "Draft Fictional Proposal",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [560, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nconst forbidden = ['guaranteed result', 'real customer', 'production deployment'];\nconst violations = forbidden.filter(term => input.proposal.toLowerCase().includes(term));\nif (violations.length) {\n  throw new Error(`Proposal audit failed: ${violations.join(', ')}`);\n}\nreturn [{ json: { ...input, audit: { passed: true, fictional_data_only: true, evidence_items_checked: input.evidence.length } } }];"
+      },
+      "id": "a52ef378-fde7-4ccd-a531-ad2fa291b32c",
+      "name": "Audit Fictional Proposal",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [800, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $input.first().json;\nreturn [{ json: { demo_complete: true, fictional_data_only: true, job_id: input.job.job_id, title: input.job.title, score: input.opportunity_score.total, recommendation: input.decision.recommendation, evidence_count: input.evidence.length, proposal: input.proposal, audit: input.audit } }];"
+      },
+      "id": "1b38c13e-d11a-49d2-ae09-169607176814",
+      "name": "Build Fictional Result",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1040, 0]
+    }
+  ],
+  "connections": {
+    "Start Demo": { "main": [[{ "node": "Create Fictional Job", "type": "main", "index": 0 }]] },
+    "Create Fictional Job": { "main": [[{ "node": "Validate Fictional Input", "type": "main", "index": 0 }]] },
+    "Validate Fictional Input": { "main": [[{ "node": "Calculate Deterministic Score", "type": "main", "index": 0 }]] },
+    "Calculate Deterministic Score": { "main": [[{ "node": "Attach Fictional Evidence", "type": "main", "index": 0 }]] },
+    "Attach Fictional Evidence": { "main": [[{ "node": "Make Deterministic Decision", "type": "main", "index": 0 }]] },
+    "Make Deterministic Decision": { "main": [[{ "node": "Draft Fictional Proposal", "type": "main", "index": 0 }]] },
+    "Draft Fictional Proposal": { "main": [[{ "node": "Audit Fictional Proposal", "type": "main", "index": 0 }]] },
+    "Audit Fictional Proposal": { "main": [[{ "node": "Build Fictional Result", "type": "main", "index": 0 }]] }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
