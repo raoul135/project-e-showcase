@@ -1,0 +1,425 @@
+[
+  {
+    "case_id": "rag-001",
+    "query": "How does Project-E retrieve evidence for a proposal?",
+    "category": "Project-E architecture",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "Qdrant",
+      "evidence",
+      "retrieval"
+    ],
+    "forbidden_terms": [
+      "guaranteed"
+    ],
+    "expected_answer_points": [
+      "Explain evidence retrieval and traceability."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "n8n-001",
+    "query": "What n8n safeguards prevent an invalid stage output from progressing?",
+    "category": "n8n workflow experience",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "validation",
+      "JSON",
+      "deterministic"
+    ],
+    "forbidden_terms": [
+      "always succeeds"
+    ],
+    "expected_answer_points": [
+      "State that validation gates are authoritative."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "qdrant-001",
+    "query": "How is hybrid Qdrant retrieval configured?",
+    "category": "Qdrant and hybrid RAG",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "dense",
+      "bm25",
+      "RRF"
+    ],
+    "forbidden_terms": [
+      "similarity percentage"
+    ],
+    "expected_answer_points": [
+      "Describe dense plus BM25 fusion."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "embedding-001",
+    "query": "Which embedding model and vector size are used?",
+    "category": "BGE-M3 embeddings",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "bge-m3",
+      "1024"
+    ],
+    "forbidden_terms": [
+      "1536"
+    ],
+    "expected_answer_points": [
+      "Name BGE-M3 and the configured size only when context supports it."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "postgres-001",
+    "query": "Where is Project-E operational state persisted?",
+    "category": "PostgreSQL",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "PostgreSQL",
+      "upwork"
+    ],
+    "forbidden_terms": [
+      "SQLite"
+    ],
+    "expected_answer_points": [
+      "Describe PostgreSQL operational storage."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "api-001",
+    "query": "What API boundary does the job reader expose?",
+    "category": "FastAPI and REST APIs",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "FastAPI",
+      "REST"
+    ],
+    "forbidden_terms": [
+      "scrapes Upwork"
+    ],
+    "expected_answer_points": [
+      "Describe the safe mock API boundary."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "browser-001",
+    "query": "Does Project-E include a production Playwright collector?",
+    "category": "Playwright browser automation",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "withheld",
+      "policy"
+    ],
+    "forbidden_terms": [
+      "production collector"
+    ],
+    "expected_answer_points": [
+      "Say the private component is withheld."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "docker-001",
+    "query": "What local AI infrastructure does the evaluation use?",
+    "category": "Docker and local AI infrastructure",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "Qdrant",
+      "LM Studio"
+    ],
+    "forbidden_terms": [
+      "cloud-only"
+    ],
+    "expected_answer_points": [
+      "Identify local Qdrant and model endpoint configuration."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "streamlit-001",
+    "query": "What does the Streamlit dashboard let a reviewer inspect?",
+    "category": "Streamlit dashboards",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "evidence",
+      "proposal",
+      "review"
+    ],
+    "forbidden_terms": [
+      "automatic submission"
+    ],
+    "expected_answer_points": [
+      "Mention evidence, decision and audit visibility."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "validation-001",
+    "query": "Which Project-E decisions are deterministic?",
+    "category": "deterministic validation",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "identity",
+      "validation",
+      "claim"
+    ],
+    "forbidden_terms": [
+      "LLM decides everything"
+    ],
+    "expected_answer_points": [
+      "Separate deterministic gates from advisory model work."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "idempotency-001",
+    "query": "How does Project-E handle duplicate work and concurrent runs?",
+    "category": "idempotency and concurrency",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "idempotency",
+      "concurrency"
+    ],
+    "forbidden_terms": [
+      "no protection"
+    ],
+    "expected_answer_points": [
+      "Describe duplicate-work prevention and controlled transitions."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "audit-001",
+    "query": "What does the proposal auditor check?",
+    "category": "proposal auditing",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "unsupported",
+      "safety",
+      "contract"
+    ],
+    "forbidden_terms": [
+      "rewrite"
+    ],
+    "expected_answer_points": [
+      "Describe audit-only, claim and contract checks."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "education-001",
+    "query": "Can Project-E present coursework as paid client experience?",
+    "category": "education and course evidence",
+    "expected_filenames": [
+      "Raoul_Professional_Skills_Evidence_Knowledge_Base.pdf"
+    ],
+    "expected_terms": [
+      "course",
+      "boundary"
+    ],
+    "forbidden_terms": [
+      "paid client"
+    ],
+    "expected_answer_points": [
+      "State the honesty boundary."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "management-001",
+    "query": "How should transferable management experience be described?",
+    "category": "transferable management experience",
+    "expected_filenames": [
+      "Raoul_Professional_Skills_Evidence_Knowledge_Base.pdf"
+    ],
+    "expected_terms": [
+      "transferable",
+      "evidence"
+    ],
+    "forbidden_terms": [
+      "direct software experience"
+    ],
+    "expected_answer_points": [
+      "Avoid upgrading it to direct technical paid experience."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "language-001",
+    "query": "Which language capabilities can be claimed?",
+    "category": "languages",
+    "expected_filenames": [
+      "Raoul_Professional_Skills_Evidence_Knowledge_Base.pdf"
+    ],
+    "expected_terms": [
+      "language"
+    ],
+    "forbidden_terms": [
+      "native"
+    ],
+    "expected_answer_points": [
+      "Use only retrieved evidence and qualify uncertainty."
+    ],
+    "negative_case": false,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "paid-001",
+    "query": "Does the showcase prove paid commercial AI deployments?",
+    "category": "honest paid-experience boundary",
+    "expected_filenames": [
+      "Raoul_Professional_Skills_Evidence_Knowledge_Base.pdf"
+    ],
+    "expected_terms": [
+      "showcase",
+      "fictional"
+    ],
+    "forbidden_terms": [
+      "paid commercial deployment"
+    ],
+    "expected_answer_points": [
+      "State that showcase evidence is not proof of paid deployments."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "limit-001",
+    "query": "What are the main Project-E limitations?",
+    "category": "Project-E limitations",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "fictional",
+      "not production"
+    ],
+    "forbidden_terms": [
+      "enterprise SaaS"
+    ],
+    "expected_answer_points": [
+      "Explain showcase and deployment limits."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "saas-001",
+    "query": "Does Project-E offer a hosted multi-tenant SaaS?",
+    "category": "unsupported SaaS claims",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "not",
+      "SaaS"
+    ],
+    "forbidden_terms": [
+      "multi-tenant"
+    ],
+    "expected_answer_points": [
+      "Reject unsupported SaaS claim."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "irrelevant-001",
+    "query": "What Kubernetes cluster runs Project-E?",
+    "category": "irrelevant technologies",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "not included"
+    ],
+    "forbidden_terms": [
+      "Kubernetes cluster"
+    ],
+    "expected_answer_points": [
+      "Say there is no evidence for Kubernetes."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  },
+  {
+    "case_id": "irrelevant-002",
+    "query": "Which AWS services host the Project-E production platform?",
+    "category": "irrelevant technologies",
+    "expected_filenames": [
+      "Project-E_Knowledge_Base_Technical_Evidence_Manual.pdf"
+    ],
+    "expected_terms": [
+      "not production"
+    ],
+    "forbidden_terms": [
+      "AWS"
+    ],
+    "expected_answer_points": [
+      "Say no hosting claim is supported."
+    ],
+    "negative_case": true,
+    "minimum_relevant_results": 1,
+    "top_k": 5
+  }
+]

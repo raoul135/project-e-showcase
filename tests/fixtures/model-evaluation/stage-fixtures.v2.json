@@ -1,0 +1,8 @@
+[
+  {"stage":"Stage 2 Job Intelligence","contract":{"job_id":"eval-job-001","job":{"title":"Fictional RAG review","description":"Evaluate evidence retrieval"}},"required_fields":["job_id","job_understanding","classification"],"score_fields":["confidence"]},
+  {"stage":"Stage 3.5 Evidence Reranking","contract":{"job_id":"eval-job-001","evidence_candidates":[{"candidate_id":1,"chunk_id":"chunk-1","text":"Fictional verified evidence"}]},"required_fields":["job_id","best_evidence","honesty_check"],"score_fields":["confidence","overall_capability_coverage"]},
+  {"stage":"Stage 3C Final Decision","contract":{"job_id":"eval-job-001","opportunity_score":72,"evidence_packs":{}},"required_fields":["job_id","decision","reasoning"],"score_fields":["confidence","score"]},
+  {"stage":"Stage 3.6 Proposal Strategy","contract":{"job_id":"eval-job-001","approved_evidence":[{"chunk_id":"chunk-1"}]},"required_fields":["job_id","strategy","must_not_claim"],"score_fields":["confidence"]},
+  {"stage":"Stage 4A Proposal Writer","contract":{"job_id":"eval-job-001","writing_brief":{"must_mention":["evidence-grounded"]}},"required_fields":["job_id","proposal"],"score_fields":["confidence"]},
+  {"stage":"Stage 4B Proposal Auditor","contract":{"job_id":"eval-job-001","proposal_to_audit":{"full_text":"Fictional evidence-grounded proposal"},"safety_contract":{"must_not_claim":["paid client experience"]}},"required_fields":["job_id","overall_pass","warnings"],"score_fields":["confidence"]}
+]
