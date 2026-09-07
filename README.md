@@ -67,9 +67,26 @@ Project-E has been refined through real operational failures: local context limi
 
 ## Run the privacy-safe demo
 
-The public demo is isolated, fictional and self-contained. It does not need PostgreSQL, Qdrant, n8n, Upwork, Gmail, model credentials or network access.
+From a clean clone on Windows:
 
 ```powershell
+git clone https://github.com/raoul135/project-e-showcase.git
+cd project-e-showcase
+.\tools\run_dashboard_demo.ps1
+```
+
+On the first run the launcher finds Python 3, creates the repository-local
+`.venv`, upgrades pip, installs `dashboard/requirements.txt`, and starts the
+demo. It records a requirements hash in `.venv`, so later runs launch directly
+unless the requirements change. The public demo is isolated, fictional and
+self-contained: it does not need PostgreSQL, Qdrant, n8n, Upwork, Gmail, model
+credentials, OpenAI credentials or network access.
+
+If PowerShell blocks local scripts, use the process-scoped workaround below;
+it does not change the machine execution policy:
+
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
 .\tools\run_dashboard_demo.ps1
 ```
 

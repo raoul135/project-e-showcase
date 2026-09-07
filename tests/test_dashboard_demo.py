@@ -73,7 +73,21 @@ class DashboardDemoTests(unittest.TestCase):
     def test_demo_launcher_selects_fixture_mode(self):
         script = (ROOT / "tools" / "run_dashboard_demo.ps1").read_text(encoding="utf-8")
         self.assertIn("PROJECT_E_DASHBOARD_MODE = 'demo'", script)
-        self.assertIn("streamlit run", script)
+        self.assertIn("'streamlit', 'run'", script)
+
+    def test_demo_launcher_bootstraps_and_caches_dependencies(self):
+        script = (ROOT / "tools" / "run_dashboard_demo.ps1").read_text(encoding="utf-8")
+        self.assertIn("-m venv", script)
+        self.assertIn("Get-Command", script)
+        self.assertIn("pip', 'install', '--upgrade', 'pip", script)
+        self.assertIn("--requirement", script)
+        self.assertIn(".project-e-dashboard-requirements.sha256", script)
+        self.assertIn("Get-FileHash", script)
+
+    def test_demo_launcher_has_clear_missing_python_message(self):
+        script = (ROOT / "tools" / "run_dashboard_demo.ps1").read_text(encoding="utf-8")
+        self.assertIn("Python 3 is required to run the Project-E demo", script)
+        self.assertIn("python.org/downloads", script)
 
     def test_dashboard_renders_the_demo_review_workspace(self):
         previous = os.environ.get("PROJECT_E_DASHBOARD_MODE")
