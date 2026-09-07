@@ -27,7 +27,10 @@ class StaticContractTest(unittest.TestCase):
 
     def test_workflow_json_files_parse(self):
         workflows = sorted((ROOT / "workflows").rglob("*.json"))
-        self.assertEqual(len(workflows), 5)
+        # The public showcase includes representative, demo and evaluation
+        # contracts. Keep this explicit so an accidentally omitted fixture is
+        # caught without rejecting the maintained evaluation set.
+        self.assertEqual(len(workflows), 8)
         for path in workflows:
             with self.subTest(path=path.relative_to(ROOT)):
                 json.loads(path.read_text(encoding="utf-8"))

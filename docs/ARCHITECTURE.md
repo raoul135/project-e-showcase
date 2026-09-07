@@ -1,5 +1,7 @@
 # Architecture
 
+![Architecture layers](../assets/diagrams/architecture-layers.svg)
+
 ## System boundary
 
 The operational Project-E design joins six components:
@@ -27,6 +29,11 @@ Analysis -> opportunity score -> evidence retrieval -> personal fit
 The production graph consists of ten n8n workflows. Only three representative
 exports are published here. `WORKFLOW_MAP.md` documents the complete graph.
 
+The stage vocabulary is explicit: Stage 1 Intake, Stage 2 Job Intelligence,
+Stage 3A Opportunity Assessment, Stage 3.5 Evidence Retrieval, Stage 3B
+Personal Fit, Stage 3C Final Decision, Stage 3.6 Proposal Strategy, Stage 4A
+Proposal Writer, Stage 4B Proposal Auditor and Stage 5 Report & Delivery.
+
 ## Reliability model
 
 - Each stage validates its input before handing work downstream.
@@ -41,6 +48,8 @@ exports are published here. `WORKFLOW_MAP.md` documents the complete graph.
   references, workflow references, and recorded live versions before Apply.
 
 ## Published examples
+
+![Pipeline](../assets/diagrams/project-e-pipeline.svg)
 
 - `deterministic-opportunity-scoring.json` demonstrates deterministic scoring
   and briefing construction.
